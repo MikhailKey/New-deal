@@ -1,1 +1,1 @@
-https://mikhailkey.github.io/New-deal/
+https://mikhailkey.github.io/New-deal/src/
