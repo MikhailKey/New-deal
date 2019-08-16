@@ -1,18 +1,18 @@
 @import 'mixin';
-
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 .hero {
     height: 100vh;
     position: relative;
     width: 100%;
     overflow: hidden;
-    background:  url('../img/hero/hero-bg.png') no-repeat center;
-    background-size: cover;
     &-footer {
         @include Roboto;
-        position: absolute;
-        left: 5%;
-        bottom: 55px;
-        width: 90%;
+        padding-bottom: 55px;
         display: flex;
         flex-wrap: wrap;
         font-size: 12px;
@@ -44,6 +44,7 @@
 }
 .callback {
     position: absolute;
+    z-index: 10;
     cursor: pointer;  
     left: 0;
     bottom: 30%;
@@ -63,6 +64,7 @@
 }
 
 .page-title {
+    z-index: 10;
     margin-bottom: 84px;
     &-wrap {
         display: flex;
@@ -74,7 +76,7 @@
         @include Merri;
         font-size: 48px;
     }
-    &-subtitle {
+    &__subtitle {
         margin-left: 26px;
         font-size: 12px;
         font-weight: 300;
