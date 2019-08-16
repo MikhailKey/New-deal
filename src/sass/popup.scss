@@ -1,0 +1,67 @@
+ @import 'mixin';
+.total {
+    width: 100%;
+    &-bg {
+        width: 100%;
+        height: 100vh;
+        background: rgba(77, 74, 98, 0.7);
+        backdrop-filter: blur(5px);
+    }
+}
+.popup-callback {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(77, 74, 98, 0.7);
+    backdrop-filter: blur(5px);
+    display: none;
+    &-content {
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        width: 655px;
+        padding: 60px 30px 50px 105px;
+        background: linear-gradient(234.74deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(77, 74, 98, 0.7);
+        backdrop-filter: blur(25px);
+    }
+    &-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    &-smalltitle {
+        @include Roboto;
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 40px;
+    }
+    &-input {
+        width: 422px;
+        height: 60px;
+        padding-left: 18px;
+        background: rgba(255, 255, 255, 0.25);
+        color: rgba(247, 247, 247, 0.603);
+        border: none;
+        margin-bottom: 30px;
+    }
+    &-subtitle {
+        margin-top: 10px;
+        color: #BDBDBD;
+        @include Roboto;
+        width: 429px;
+        font-size: 14px;
+    }
+    &-close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    
+}
+
+input::-moz-placeholder { color: rgba(247, 247, 247, 0.603); }
+input::-webkit-input-placeholder { color: rgba(247, 247, 247, 0.603); }

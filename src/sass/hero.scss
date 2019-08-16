@@ -1,0 +1,105 @@
+@import 'mixin';
+
+.hero {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background:  url('../img/hero/hero-bg.png') no-repeat center;
+    background-size: cover;
+    &-footer {
+        @include Roboto;
+        position: absolute;
+        bottom: 55px;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+        line-height: 18px;
+        justify-content: space-between;
+        align-items: center;
+        &-rights {
+            flex-basis: 20%;
+        }
+        &-policy {
+            flex-basis: 60%;
+            &__text {
+                cursor: pointer;
+            }
+        }
+        &-creator {
+            flex-basis: 20%
+            img {
+                width: 28px;
+                height: auto;
+                display: inline-block;
+            }
+            &__text {
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+.callback {
+    position: absolute;
+    cursor: pointer;  
+    left: 0;
+    bottom: 30%;
+    width: 302px;
+    height: 61px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(260.18deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 80.23%), rgba(255, 255, 255, 0.25);
+    &-text { 
+        
+        color: $color-blue;
+    }
+    &-arrow {
+        margin: 0 30px 0 23px;
+    }
+}
+
+.page-title {
+    margin-bottom: 84px;
+    &-wrap {
+        display: flex;
+        align-items: center
+    }
+    padding-top: 28px;
+    &__name {
+        text-transform: uppercase;
+        @include Merri;
+        font-size: 48px;
+    }
+    &-subtitle {
+        margin-left: 26px;
+        font-size: 12px;
+        font-weight: 300;
+        font-style: normal;
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 20px;
+            width: 1px;
+            vertical-align: middle;
+            background-color: white;    
+            margin-right: 19px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.contacts {
+    &-item {
+        display: flex;
+        margin-bottom: 15px;
+        &__info {
+            margin-left: 18px;
+        }
+        &__message {
+            margin-left: 4px;
+        }
+    }
+}
+
