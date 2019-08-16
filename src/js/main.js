@@ -1,6 +1,6 @@
 //политика конфиденциальности
 let policyButton = document.querySelector('.hero-footer-policy__text'),
-    policyWindow = document.querySelector('.modal'),
+    policyWindow = document.querySelector('.policy'),
     arrowLeave = document.querySelectorAll('.modal-arrow__close');
 
 policyButton.addEventListener('click', function () {
@@ -12,14 +12,15 @@ for (let i=0; i<arrowLeave.length; i++) {
     })
 }
 
-
+//обратная связь
 let popupButton = document.querySelector('.callback'),
     popupWindow = document.querySelector('.popup-callback'),
     closeButton = document.querySelector('.popup-callback-close');
 
 popupButton.addEventListener('click', function () {
-    popupWindow.style.display = 'block'
+    popupWindow.style.transform = 'translateX(0%)';
 })
 closeButton.addEventListener('click', function () {
-    popupWindow.style.display = 'none';
+    popupWindow.style.transform = 'translateX(100%)';
 })
+//о компании

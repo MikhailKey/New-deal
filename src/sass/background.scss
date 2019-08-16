@@ -37,6 +37,10 @@
     background: rgba(white, 0.7);
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
     transition: 0.3s;
+    &-wrap {
+        display: flex;
+        cursor: pointer;
+    }
     &:hover {
         box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.99);
         
@@ -64,8 +68,8 @@
         transform: translate(-50%, -50%);
     }
     &-description {
-        width: 300px;
-        padding-left: 45px;
+        white-space: nowrap;
+        padding-left: 25px;
         transition: 0.3s;
         &__bank, &__delete, &__buy, &__debt {
             margin-left: 45px;
@@ -86,33 +90,39 @@
             margin-left: -200px;
         }
     }
-    &-position {
+    
+    &-one {
+        left: 51.1%;
+        top: 20.3%;
         position: absolute;
-        &-one {
-            left: 51.1%;
-            top: 20.3%;
+    }
+    &-two {
+        left: 67.9%;
+        top: 35%;
+        position: absolute;
+    }
+    &-three {
+        left: 70.3%;
+        top: 65%;
+        position: absolute;
+    }
+    &-four {
+        left: 42.5%;
+        top: 67%;
+        position: absolute;
+    }
+    &-one, &-two, &-three, &-four {
+        &:hover {
+            .dot-description {
+                &__bank, &__delete, &__buy, &__debt {
+                    display: block;
+            }
         }
-        &-two {
-            left: 67.9%;
-            top: 35%;
-        }
-        &-three {
-            left: 70.3%;
-            top: 65%;
-        }
-        &-four {
-            left: 42.5%;
-            top: 67%;
-        }
-    &:hover {
-        .dot-description {
-            &__bank, &__delete, &__buy, &__debt {
-                display: block;
         }
     }
-    }
-    }    
-}
+    
+}    
+
 
 
 @keyframes mainBg {

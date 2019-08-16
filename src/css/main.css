@@ -66,6 +66,11 @@
   transition: 0.3s;
 }
 
+.dot-wrap {
+  display: flex;
+  cursor: pointer;
+}
+
 .dot:hover {
   box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.99);
 }
@@ -95,8 +100,8 @@
 }
 
 .dot-description {
-  width: 300px;
-  padding-left: 45px;
+  white-space: nowrap;
+  padding-left: 25px;
   transition: 0.3s;
 }
 
@@ -123,34 +128,46 @@
   margin-left: -200px;
 }
 
-.dot-position {
+.dot-one {
+  left: 51.1%;
+  top: 20.3%;
   position: absolute;
 }
 
-.dot-position-one {
-  left: 51.1%;
-  top: 20.3%;
-}
-
-.dot-position-two {
+.dot-two {
   left: 67.9%;
   top: 35%;
+  position: absolute;
 }
 
-.dot-position-three {
+.dot-three {
   left: 70.3%;
   top: 65%;
+  position: absolute;
 }
 
-.dot-position-four {
+.dot-four {
   left: 42.5%;
   top: 67%;
+  position: absolute;
 }
 
-.dot-position:hover .dot-description__bank,
-.dot-position:hover .dot-description__delete,
-.dot-position:hover .dot-description__buy,
-.dot-position:hover .dot-description__debt {
+.dot-one:hover .dot-description__bank,
+.dot-one:hover .dot-description__delete,
+.dot-one:hover .dot-description__buy,
+.dot-one:hover .dot-description__debt,
+.dot-two:hover .dot-description__bank,
+.dot-two:hover .dot-description__delete,
+.dot-two:hover .dot-description__buy,
+.dot-two:hover .dot-description__debt,
+.dot-three:hover .dot-description__bank,
+.dot-three:hover .dot-description__delete,
+.dot-three:hover .dot-description__buy,
+.dot-three:hover .dot-description__debt,
+.dot-four:hover .dot-description__bank,
+.dot-four:hover .dot-description__delete,
+.dot-four:hover .dot-description__buy,
+.dot-four:hover .dot-description__debt {
   display: block;
 }
 
@@ -262,6 +279,7 @@ a {
 .hero-footer {
   font-family: 'Roboto', sans-serif;
   position: absolute;
+  left: 5%;
   bottom: 55px;
   width: 90%;
   display: flex;
@@ -418,8 +436,9 @@ a {
 
 .modal {
   position: absolute;
+  width: 79.5%;
   top: 0;
-  left: 0;
+  right: 0;
   padding: 5vh 3vw 10vh 10vw;
   height: 100vh;
   background: rgba(77, 74, 98, 0.7);
@@ -574,7 +593,8 @@ a {
   height: 100vh;
   background: rgba(77, 74, 98, 0.7);
   backdrop-filter: blur(5px);
-  display: none;
+  transition: 0.3s;
+  transform: translateX(100%);
 }
 
 .popup-callback-content {

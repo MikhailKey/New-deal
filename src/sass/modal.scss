@@ -1,8 +1,9 @@
 @import 'mixin';
 .modal {
     position: absolute;
+    width: 79.5%;
     top: 0;
-    left: 0;
+    right: 0;
     padding: 5vh 3vw 10vh 10vw;
     height: 100vh;
     background: rgba(77, 74, 98, 0.7);
