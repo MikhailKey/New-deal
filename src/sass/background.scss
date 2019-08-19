@@ -93,6 +93,8 @@
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
             display: none;
+            z-index: 100;
+
         }
         &__left {
             margin-left: -200px;

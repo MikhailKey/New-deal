@@ -128,6 +128,7 @@
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   display: none;
+  z-index: 100;
 }
 
 .dot-description__left {
@@ -220,6 +221,52 @@
   }
 }
 
+.form-button {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: 60px;
+  font-size: 18px;
+  color: #252247;
+  background: linear-gradient(257.79deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.25);
+}
+
+.form-input {
+  height: 60px;
+  padding-left: 18px;
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(247, 247, 247, 0.603);
+  border: none;
+  margin-bottom: 30px;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -240,18 +287,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.main-button {
-  font-family: 'Merriweather', serif;
-  font-weight: bold;
-  border: none;
-  width: 422px;
-  cursor: pointer;
-  height: 60px;
-  font-size: 18px;
-  color: #252247;
-  background: linear-gradient(257.79deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.25);
 }
 .fade {
   animation-name: fade;
@@ -463,6 +498,7 @@ footer {
   margin-left: 400px;
   transition: 0.5s;
   transform: translateX(100%);
+  z-index: 99;
 }
 
 .modal-wrap {
@@ -612,6 +648,11 @@ footer {
   backdrop-filter: blur(5px);
   transition: 0.3s;
   transform: translateX(100%);
+  z-index: 99;
+}
+
+.popup-callback__button {
+  width: 422px;
 }
 
 .popup-callback-content {
@@ -638,12 +679,6 @@ footer {
 
 .popup-callback-input {
   width: 422px;
-  height: 60px;
-  padding-left: 18px;
-  background: rgba(255, 255, 255, 0.25);
-  color: rgba(247, 247, 247, 0.603);
-  border: none;
-  margin-bottom: 30px;
 }
 
 .popup-callback-subtitle {
@@ -669,4 +704,148 @@ input::-moz-placeholder {
 
 input::-webkit-input-placeholder {
   color: rgba(247, 247, 247, 0.603);
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.service-modal {
+  position: absolute;
+  width: 79.5%;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: rgba(77, 74, 98, 0.7);
+  backdrop-filter: blur(5px);
+  margin-left: 400px;
+  transition: 0.5s;
+  transform: translateX(0%);
+  z-index: 99;
+}
+
+.service-modal-wrap {
+  position: relative;
+  padding: 5vh 3vw 10vh 10vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-modal-header {
+  height: 20vh;
+}
+
+.service-modal-main {
+  height: 40vh;
+}
+
+.service-modal-footer {
+  position: relative;
+  height: 40vh;
+  background: rgba(77, 74, 98, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.service-modal-footer__block {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+}
+
+.service-modal-footer__arrow {
+  display: inline-block;
+}
+
+.service-modal-footer__text {
+  margin-left: 15px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.service-modal-arrow {
+  position: absolute;
+  cursor: pointer;
+  top: 4%;
+  left: -10%;
+  transition: 0.3s;
+}
+
+.service-modal-arrow__close {
+  cursor: pointer;
+}
+
+.service-modal-arrow:hover {
+  transform: scale(1.1);
+}
+
+.service-modal-title {
+  font-weight: 900;
+  font-size: 48px;
+  width: 868px;
+  margin-bottom: 50px;
+}
+
+.service-modal-text {
+  height: 100%;
+  overflow: auto;
+  max-height: 800px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding-right: 100px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #999;
+  border-radius: 50px;
+}
+
+::-webkit-resizer {
+  background-color: #666;
 }

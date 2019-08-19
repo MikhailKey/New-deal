@@ -17,14 +17,3 @@ body {
 a {
     text-decoration: none
 }
-.main-button {
-    @include Merri;
-    font-weight: bold;
-    border: none;
-    width: 422px;
-    cursor: pointer;
-    height: 60px;
-    font-size: 18px;
-    color: #252247;
-    background: linear-gradient(257.79deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.25);
-}
