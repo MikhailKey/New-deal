@@ -99,10 +99,32 @@ footer {
         margin-bottom: 15px;
         &__info {
             margin-left: 18px;
+            @include Merri;
+
         }
         &__message {
             margin-left: 4px;
         }
+        &__image {
+            width: 24px;
+            height: 23px;
+            margin-top: 3px;
+        }
+    }
+    &-map {
+        margin-top: 40px;
+        width: 100%;
+        height: 300px;
+        background: red;
     }
 }
 
+.links {
+    &-slider {
+        margin-top: 50px;
+    }
+    &-slide {
+        padding-bottom: 10px;
+        cursor: pointer
+    }
+}

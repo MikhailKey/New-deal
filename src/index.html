@@ -37,26 +37,27 @@
 			</div>
 			<div class="contacts">
 				<div class="contacts-item">
-					<img src="img/hero/contacts/phone.png" alt="">
+					<img class="contacts-item__image" src="img/hero/contacts/phone.png" alt="">
 					<p class="contacts-item__info">+7 (495) 374–66–55</p>
 				</div>
 				<div class="contacts-item">
-					<img src="img/hero/contacts/phone.png" alt="">
+					<img class="contacts-item__image" src="img/hero/contacts/phone.png" alt="">
 					<p class="contacts-item__info">+7 (8452) 74–66–55 </p>
 				</div>
 				<div class="contacts-item">
-					<img class="contacts-item__message" src="img/hero/contacts/message.png" alt="">
+					<img class="contacts-item__image" class="contacts-item__message" src="img/hero/contacts/message.png" alt="">
 					<p class="contacts-item__info">info@dolgoved.ru</p>
 				</div>				
 			</div>
 			<div class="links-slider">
-					<div class="links-slide">01 о компании</div>
+					<div class="links-slide modal-info" data-title="О компании" data-content="Сайт рыбатекст поможет дизайнеру.">01 о компании</div>
 					<div class="links-slide">02 услуги</div>
-					<div class="links-slide">03 контакты</div>
+					<div class="links-slide modal-contacts" data-title="Контакты" data-content="Сайт рыбатекст поможет дизайнеру.">03 контакты</div>
 			</div>
 		</div>
 		<div class="callback">
 			<p class="callback-text">Мы перезвоним</p>
+			
 			<img class="callback-arrow" src="img/hero/vectors/Arrow.png" alt="">
 		</div>
 		<div class="particle-bg">
@@ -68,16 +69,16 @@
 		</div>
 		<div class="particle-dots">
 				<div class="dot-one">
-						<div class="dot-wrap">
+						<div class="dot-wrap"  data-title="Банкротство" data-content="Сайт рыбатекст поможет дизайнеру.">
 							<div class="dot"></div>
-							<h1 class="dot-description">Банкротство</h1>
+							<h1 class="dot-description" >Банкротство</h1>
 						</div>
 						<p class="dot-description__bank fade">
 								Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста
 						</p>
 					</div>
 					<div class="dot-two">
-						<div class="dot-wrap">
+						<div class="dot-wrap" data-title="Взыскание долгов" data-content="Сайт рыбатекст поможет дизайнеру.">
 							<div class="dot"></div>
 							<h1 class="dot-description">Взыскание долгов</h1>
 						</div>
@@ -86,7 +87,7 @@
 						</p>
 					</div>
 					<div class="dot-three">
-						<div class="dot-wrap">
+						<div class="dot-wrap" data-title="Ликвидация" data-content="Сайт рыбатекст поможет дизайнеру.">
 							<div class="dot"></div>
 							<h1 class="dot-description">Ликвидация</h1>
 						</div>
@@ -95,7 +96,7 @@
 						</p>
 					</div>
 					<div class="dot-four">
-						<div class="dot-wrap">
+						<div class="dot-wrap" data-title="Выкуп долгов" data-content="Сайт рыбатекст поможет дизайнеру.">
 							<div class="dot"></div>
 							<h1 class="dot-description">Выкуп долгов</h1>
 						</div>
@@ -112,7 +113,7 @@
 						<p class="hero-footer-right__text">Все права защищены	</p>
 				</div>
 				<div class="hero-footer-policy">
-						<p class="hero-footer-policy__text">Политика конфиденциальности и пользовательское соглашение</p>
+						<p class="hero-footer-policy__text modal-info" data-title="Политика конфиденциальности и пользователское соглашение" data-content="Сайт рыбатекст поможет дизайнеру.">Политика конфиденциальности и пользовательское соглашение</p>
 				</div>
 				<a href="https://asap-ag.ru/">
 					<div class="hero-footer-creator">
@@ -123,7 +124,7 @@
 			</div>
 		</div>
 	</footer>
-		<div class="modal policy">
+		<div class="modal">
 			<div class="modal-nopadding">
 				<div class="modal-wrap">
 					<div class="modal-header">
@@ -150,10 +151,10 @@
 		<div class="service-modal">
 			<div class="service-modal-nopadding">
 				<div class="service-modal-wrap">
-					<div class="modal-header">
+					<div class="service-modal-header">
 						<img class="service-modal-arrow service-modal-arrow__close" src="img/hero/vectors/arrow-left.png" alt="">	
 						<h1 class="service-modal-title">
-							О компании
+							Банкротство
 						</h1>
 					</div>
 					<div class="service-modal-main">
@@ -167,11 +168,19 @@
 				<div class="service-modal-footer service-modal-offer">
 					<h1 class="service-modal-footer__title">Оставить заявку</h1>
 					<form action="" class="service-modal-footer__form">
-						<input type="text" class="service-modal-footer__input form-input">
-						<input type="text" class="service-modal-footer__input form-input">
-						<input type="text" class="service-modal-footer__input form-input">
-						<button class="form-button">Оставить  заявку</button>
+						<input type="text" class="service-modal-footer__input form-input" placeholder="Ваше имя">
+						<input type="text" class="service-modal-footer__input form-input" placeholder="Ваш номер телефона">
+						<input type="text" class="service-modal-footer__input form-input" placeholder="Ваш  email">
+						<button class="service-modal-footer__button form-button">Оставить  заявку</button>
+						<div class="service-modal-footer__add-file">			
+							<label for="file"><img class="service-modal-footer__attach" src="img/hero/vectors/attach.png" alt="">Прикрепить правоустанавливающие документы</label>
+							<input type="file" data-multiple-caption="{count}" name='file' multiple="multiple" id="file">
+						</div>
 					</form>
+					<div class="service-modal-footer__answer">
+						<h1 class="service-modal-footer__title">Благодарим за заявку!</h1>
+						<p class="service-modal-footer__subtitle">Ожидайте звонка специалиста</p>
+					</div>
 					<div class="service-modal-footer__block service-modal-arrow__close">
 						<img class="modal-footer__arrow " src="img/hero/vectors/arrow-left.png" alt=""><p class="service-modal-footer__text">К списку</p>
 					</div>
