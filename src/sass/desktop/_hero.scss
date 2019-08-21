@@ -10,6 +10,7 @@ footer {
     position: relative;
     width: 100%;
     overflow: hidden;
+    
     &-footer {
         @include Roboto;
         padding-bottom: 55px;
@@ -29,7 +30,7 @@ footer {
             }
         }
         &-creator {
-            flex-basis: 20%
+            flex-basis: 20%;
             img {
                 width: 28px;
                 height: auto;

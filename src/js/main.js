@@ -30,33 +30,20 @@ for (let i=0; i<openButton.length; i++)
     {    
         let title = document.querySelector('.service-modal-title'),
             text = document.querySelector('.service-modal-text');   
-        if (!openButton[i].innerHTML.includes('Выкуп долгов')) 
-        {
+        
             openButton[i].addEventListener('click', function() 
             {
                 title.innerHTML = this.getAttribute('data-title');
                 text.innerHTML = this.getAttribute('data-content');
                 formWindow.classList.add('service-modal-active');
+                if (!openButton[i].innerHTML.includes('Выкуп долгов')) 
+                {
                 addFile.style.display = 'none';
+                } else {
+                addFile.style.display = 'flex';   
+                }
             });
-        } 
-        else 
-        {
-            openButton[i].addEventListener('click', function() 
-            {
-                title.innerHTML = this.getAttribute('data-title');
-                text.innerHTML = this.getAttribute('data-content');
-                formWindow.classList.add('service-modal-active');
-                addFile.style.display = 'flex';
-            });
-        }
-        openButton[i].addEventListener('mousemove', function() 
-        {
-            this.classList.toggle('.dot-wrap__index');
-        })
-
     }
-
 //контакты
 let contactsLayout = `
 <div class="contacts">
@@ -123,7 +110,4 @@ Array.prototype.forEach.call(inputs, function(input){
       label.innerHTML = labelVal;
 	});
 });
-
-
-//мобильная версия 
 

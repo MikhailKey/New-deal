@@ -49,9 +49,6 @@
     &-wrap {
         display: flex;
         cursor: pointer;
-        &__index {
-            z-index: 999;
-        }
         &:hover {
             .dot {
             box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.99);
@@ -109,21 +106,25 @@
         left: 51.1%;
         top: 20.3%;
         position: absolute;
+        z-index: 10;
     }
     &-two {
         left: 67.9%;
         top: 35%;
         position: absolute;
+        z-index: 9;
     }
     &-three {
         left: 70.3%;
         top: 65%;
         position: absolute;
+        z-index: 8;
     }
     &-four {
         left: 42.5%;
         top: 67%;
         position: absolute;
+        z-index: 7;
     }
     &-one, &-two, &-three, &-four {
         &:hover {
