@@ -1,27 +1,27 @@
-function getElement(classCSS) {
-    return document.querySelector(classCSS);
-}
-
-function getElements(classCSS) {
-    return document.querySelectorAll(classCSS);
-}
-
 function showModal(...args) 
 {    
-    let modalButton = getElements(args[0]),
+    let modalButton = document.querySelectorAll(args[0]),
         body = document.querySelector(args[1]),
-        arrowLeave = getElements(args[2]);
+        arrowLeave = document.querySelectorAll(args[2]);
         
-
     modalButton.forEach((button) => 
     {
-        let title = getElement(args[3]),
-            text = getElement(args[4]);
+        let title = document.querySelector(args[3]),
+            text = document.querySelector(args[4]);
         button.addEventListener('click', function() 
             {
             title.innerHTML = this.getAttribute('data-title');
             text.innerHTML = this.getAttribute('data-content');
             body.classList.add('modal__active');
+            
+            document.addEventListener('mouseup', function (e) {
+                let div = document.querySelector('.modal');
+            
+                if (!div.contains(e.target)) 
+                {
+                    body.classList.remove('modal__active');
+                }
+            }.bind(this));
             });
     })  
 
@@ -36,11 +36,12 @@ function showModal(...args)
 
 function showServiceModal(...args) 
 {
-    let openButton = getElements(args[0]),
+    let openButton = document.querySelectorAll(args[0]),
         body = document.querySelector(args[1]),
-        arrowLeaves = getElements(args[2]),
-        title = getElement(args[3]),
-        text = getElement(args[4]); 
+        arrowLeaves = document.querySelectorAll(args[2]),
+        title = document.querySelector(args[3]),
+        text = document.querySelector(args[4]); 
+
     openButton.forEach(function(button) 
     {
         if (!button.innerHTML.includes('Выкуп долгов')) 
@@ -61,17 +62,28 @@ function showServiceModal(...args)
             body.classList.remove('service-modal__active');
         })
     })
+
+    document.addEventListener('mouseup', function (e) {
+        let div = document.querySelector('.service-modal');
+    
+        if (!div.contains(e.target)) 
+        {
+            body.classList.remove('service-modal__active');
+        }
+    }.bind(this));
 }
 //контакты
 function showContacts(...args) 
 {
-    let contactsButton = getElement(args[0]),
+    let contactsButton = document.querySelector(args[0]),
         body = document.querySelector(args[1]),
-        closeButton = getElements(args[2]);
+        closeButton = document.querySelectorAll(args[2]);
+
     contactsButton.addEventListener('click', function() 
     {
         body.classList.add('modal-contacts-window__active');
     });
+
     closeButton.forEach(function(arrow) 
     {
         arrow.addEventListener('click', function() 
@@ -79,33 +91,54 @@ function showContacts(...args)
             body.classList.remove('modal-contacts-window__active');
         })
     })
+
+    document.addEventListener('mouseup', function (e) {
+        let div = document.querySelector('.modal-contacts-window');
+    
+        if (!div.contains(e.target)) 
+        {
+            body.classList.remove('modal-contacts-window__active');
+        }
+    }.bind(this));
 }
 function showServiceDebt(...args)
 {
-    let debtButton = getElement(args[0]),
+    let debtButton = document.querySelector(args[0]),
         body = document.querySelector(args[1]),
-        closeButton = getElements(args[2]);
+        closeButton = document.querySelectorAll(args[2]);
+
     debtButton.addEventListener('click', function() 
     {
         body.classList.add('service-modal-debt__active');
     });
+
     closeButton.forEach(function(arrow) {
         arrow.addEventListener('click', function() 
         {
             body.classList.remove('service-modal-debt__active');
         })
     })
+
+    document.addEventListener('mouseup', function (e) {
+        let div = document.querySelector('.service-modal-debt');
+    
+        if (!div.contains(e.target)) 
+        {
+            body.classList.remove('service-modal-debt__active');
+        }
+    }.bind(this));
 }
 function showPopup(...args) 
 {
-    let popupButton = getElement(args[0]),
+    let popupButton = document.querySelector(args[0]),
     body = document.querySelector(args[1]),
-    closeButton = getElement(args[2]);
+    closeButton = document.querySelector(args[2]);
 
     popupButton.addEventListener('click', function () 
     {
         body.classList.add('popup-callback__active');
     })
+
     closeButton.addEventListener('click', function () 
     {
         body.classList.remove('popup-callback__active');
@@ -130,7 +163,6 @@ function attachFile(...args)
 	});
 });
 }
-
 
 showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-arrow__close');
 showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-modal-title', '.service-modal-text');

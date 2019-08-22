@@ -740,10 +740,6 @@ input::-webkit-input-placeholder {
   background-size: cover;
 }
 
-.mobile {
-  display: none;
-}
-
 .mobile-slide {
   margin-bottom: 10px;
   cursor: pointer;
@@ -1176,6 +1172,7 @@ footer {
   position: relative;
   width: 100%;
   overflow: hidden;
+  display: none;
 }
 
 .hero-footer {
@@ -1406,6 +1403,26 @@ body.service-modal-debt__active .service-modal-debt {
 
 body.popup-callback__active .popup-callback {
   transform: translateX(0%);
+}
+
+body.mobile-modal__active .mobile-modal {
+  display: 'block';
+}
+
+body.mobile-contacts__active .mobile-contacts {
+  display: 'block';
+}
+
+body.mobile-service__active .mobile-service {
+  display: 'block';
+}
+
+body.mobile-debt__active .mobile-debt {
+  display: 'block';
+}
+
+body.mobile-popup-callback__active .mobile-popup-callback {
+  display: 'block';
 }
 
 .fade {
