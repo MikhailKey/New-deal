@@ -1,0 +1,13 @@
+.service-modal-debt {
+    position: absolute;
+    width: 79.5%;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(77, 74, 98, 0.7);
+    backdrop-filter: blur(5px);
+    margin-left: 400px;
+    transition: 0.5s;
+    transform: translateX(100%);
+    z-index: 99;
+}

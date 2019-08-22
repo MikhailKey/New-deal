@@ -10,7 +10,6 @@ footer {
     position: relative;
     width: 100%;
     overflow: hidden;
-    
     &-footer {
         @include Roboto;
         padding-bottom: 55px;
@@ -116,7 +115,6 @@ footer {
         margin-top: 40px;
         width: 100%;
         height: 300px;
-        background: red;
     }
 }
 
@@ -128,4 +126,7 @@ footer {
         padding-bottom: 10px;
         cursor: pointer
     }
+}
+.modal-active {
+    transform: translateX(0%);
 }

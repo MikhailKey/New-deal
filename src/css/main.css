@@ -877,6 +877,19 @@ input::-webkit-input-placeholder {
 .mobile-callback__arrow {
   margin: 0 30px 0 23px;
 }
+.service-modal-debt {
+  position: absolute;
+  width: 79.5%;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: rgba(77, 74, 98, 0.7);
+  backdrop-filter: blur(5px);
+  margin-left: 400px;
+  transition: 0.5s;
+  transform: translateX(100%);
+  z-index: 99;
+}
 .fade {
   animation-name: fade;
   animation-duration: 1s;
@@ -1031,7 +1044,7 @@ input::-webkit-input-placeholder {
   padding: 18px;
   line-height: 26px;
   font-size: 16px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #4D4168;
   backdrop-filter: blur(5px);
   display: none;
 }
@@ -1284,7 +1297,6 @@ footer {
   margin-top: 40px;
   width: 100%;
   height: 300px;
-  background: red;
 }
 
 .links-slider {
@@ -1294,6 +1306,10 @@ footer {
 .links-slide {
   padding-bottom: 10px;
   cursor: pointer;
+}
+
+.modal-active {
+  transform: translateX(0%);
 }
 
 .fade {
@@ -1370,6 +1386,26 @@ body {
 
 a {
   text-decoration: none;
+}
+
+body.modal__active .modal {
+  transform: translateX(0%);
+}
+
+body.modal-contacts-window__active .modal-contacts-window {
+  transform: translateX(0%);
+}
+
+body.service-modal__active .service-modal {
+  transform: translateX(0%);
+}
+
+body.service-modal-debt__active .service-modal-debt {
+  transform: translateX(0%);
+}
+
+body.popup-callback__active .popup-callback {
+  transform: translateX(0%);
 }
 
 .fade {
@@ -1539,6 +1575,7 @@ a {
 
 .modal-main {
   height: 50vh;
+  overflow: auto;
 }
 
 .modal-footer {
@@ -1585,17 +1622,12 @@ a {
 
 .modal-text {
   height: 100%;
-  overflow: auto;
   max-height: 800px;
   line-height: 34px;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   padding-right: 100px;
-}
-
-.modal-active {
-  transform: translateX(0%);
 }
 
 ::-webkit-scrollbar {
@@ -1736,7 +1768,6 @@ a {
 
 .service-modal-footer__add-file {
   flex-basis: 100%;
-  display: none;
 }
 
 .service-modal-footer__add-file label {
@@ -1991,6 +2022,10 @@ a {
   cursor: pointer;
 }
 
+.modal-active {
+  transform: translateX(0%);
+}
+
 input::-moz-placeholder {
   color: rgba(247, 247, 247, 0.603);
 }
@@ -2092,6 +2127,7 @@ input::-webkit-input-placeholder {
 
 .modal-main {
   height: 50vh;
+  overflow: auto;
 }
 
 .modal-footer {
@@ -2138,17 +2174,12 @@ input::-webkit-input-placeholder {
 
 .modal-text {
   height: 100%;
-  overflow: auto;
   max-height: 800px;
   line-height: 34px;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   padding-right: 100px;
-}
-
-.modal-active {
-  transform: translateX(0%);
 }
 
 ::-webkit-scrollbar {
@@ -2181,4 +2212,19 @@ input::-webkit-input-placeholder {
 
 ::-webkit-resizer {
   background-color: #666;
+}
+
+.modal-contacts-window {
+  position: absolute;
+  width: 79.5%;
+  top: 0;
+  right: 0;
+  padding: 5vh 3vw 10vh 10vw;
+  height: 100vh;
+  background: rgba(77, 74, 98, 0.7);
+  backdrop-filter: blur(5px);
+  margin-left: 400px;
+  transition: 0.5s;
+  z-index: 99;
+  transform: translateX(100%);
 }

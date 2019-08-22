@@ -63,6 +63,8 @@
     }
     
 }
-
+.modal-active {
+    transform: translateX(0%);
+}
 input::-moz-placeholder { color: rgba(247, 247, 247, 0.603); }
 input::-webkit-input-placeholder { color: rgba(247, 247, 247, 0.603); }

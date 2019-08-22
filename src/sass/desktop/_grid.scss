@@ -18,3 +18,18 @@ body {
 a {
     text-decoration: none
 }
+body.modal__active .modal {
+    transform: translateX(0%);
+}
+body.modal-contacts-window__active .modal-contacts-window {
+    transform: translateX(0%);
+}
+body.service-modal__active .service-modal {
+    transform: translateX(0%);
+}
+body.service-modal-debt__active .service-modal-debt {
+    transform: translateX(0%);
+}
+body.popup-callback__active .popup-callback {
+    transform: translateX(0%);
+}
