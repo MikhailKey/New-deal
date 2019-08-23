@@ -1,3 +1,7 @@
+let hero = document.querySelector('.hero');
+        
+
+
 function showModal(...args) 
 {    
     let modalButton = document.querySelectorAll(args[0]),
@@ -8,21 +12,14 @@ function showModal(...args)
     {
         let title = document.querySelector(args[3]),
             text = document.querySelector(args[4]);
+
         button.addEventListener('click', function() 
-            {
+        {
             title.innerHTML = this.getAttribute('data-title');
             text.innerHTML = this.getAttribute('data-content');
             body.classList.add('modal__active');
-            
-            document.addEventListener('mouseup', function (e) {
-                let div = document.querySelector('.modal');
-            
-                if (!div.contains(e.target)) 
-                {
-                    body.classList.remove('modal__active');
-                }
-            }.bind(this));
-            });
+            hero.classList.add('blur');
+        });
     })  
 
     arrowLeave.forEach(function(arrow) 
@@ -30,6 +27,7 @@ function showModal(...args)
         arrow.addEventListener('click', function() 
         {
             body.classList.remove('modal__active');
+            hero.classList.remove('blur');
         });
     })
 }
@@ -51,6 +49,7 @@ function showServiceModal(...args)
                 title.innerHTML = this.getAttribute('data-title');
                 text.innerHTML = this.getAttribute('data-content');
                 body.classList.add('service-modal__active');
+                hero.classList.add('blur');
             });
         }
     })
@@ -60,17 +59,9 @@ function showServiceModal(...args)
         arrow.addEventListener('click', function() 
         {
             body.classList.remove('service-modal__active');
+            hero.classList.remove('blur');
         })
     })
-
-    document.addEventListener('mouseup', function (e) {
-        let div = document.querySelector('.service-modal');
-    
-        if (!div.contains(e.target)) 
-        {
-            body.classList.remove('service-modal__active');
-        }
-    }.bind(this));
 }
 //контакты
 function showContacts(...args) 
@@ -82,6 +73,7 @@ function showContacts(...args)
     contactsButton.addEventListener('click', function() 
     {
         body.classList.add('modal-contacts-window__active');
+        hero.classList.add('blur');
     });
 
     closeButton.forEach(function(arrow) 
@@ -89,18 +81,11 @@ function showContacts(...args)
         arrow.addEventListener('click', function() 
         {
             body.classList.remove('modal-contacts-window__active');
+            hero.classList.remove('blur');
         })
     })
-
-    document.addEventListener('mouseup', function (e) {
-        let div = document.querySelector('.modal-contacts-window');
-    
-        if (!div.contains(e.target)) 
-        {
-            body.classList.remove('modal-contacts-window__active');
-        }
-    }.bind(this));
 }
+
 function showServiceDebt(...args)
 {
     let debtButton = document.querySelector(args[0]),
@@ -110,24 +95,19 @@ function showServiceDebt(...args)
     debtButton.addEventListener('click', function() 
     {
         body.classList.add('service-modal-debt__active');
+        hero.classList.add('blur');
     });
 
-    closeButton.forEach(function(arrow) {
+    closeButton.forEach(function(arrow) 
+    {
         arrow.addEventListener('click', function() 
         {
             body.classList.remove('service-modal-debt__active');
+            hero.classList.remove('blur');
         })
     })
-
-    document.addEventListener('mouseup', function (e) {
-        let div = document.querySelector('.service-modal-debt');
-    
-        if (!div.contains(e.target)) 
-        {
-            body.classList.remove('service-modal-debt__active');
-        }
-    }.bind(this));
 }
+
 function showPopup(...args) 
 {
     let popupButton = document.querySelector(args[0]),
@@ -137,13 +117,16 @@ function showPopup(...args)
     popupButton.addEventListener('click', function () 
     {
         body.classList.add('popup-callback__active');
+        hero.classList.add('blur');
     })
 
     closeButton.addEventListener('click', function () 
     {
         body.classList.remove('popup-callback__active');
+        hero.classList.remove('blur');
     })
 }
+
 function attachFile(...args) 
 {
     let inputs = document.querySelectorAll(args[0]);
@@ -163,6 +146,7 @@ function attachFile(...args)
 	});
 });
 }
+
 function ecsHide() {
     let body = document.querySelector('body').addEventListener("keypress", function(e)
     {
@@ -172,6 +156,17 @@ function ecsHide() {
        };
     });
 }
+
+document.addEventListener('mouseup', function (e) {
+    let body = document.querySelector('body');
+    
+        if (hero.contains(e.target)) 
+        {
+            body.classList = '';
+            hero.classList.remove('blur');
+        }
+}.bind(this));
+
 showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-arrow__close');
 showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-modal-title', '.service-modal-text');
 showContacts('.modal-contacts', 'body', '.modal-contacts__close');

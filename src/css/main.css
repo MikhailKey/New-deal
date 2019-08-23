@@ -1,18 +1,6 @@
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -28,18 +16,6 @@
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -109,18 +85,6 @@
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -136,18 +100,6 @@
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -273,18 +225,6 @@
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -300,18 +240,6 @@
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -376,18 +304,6 @@
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -403,18 +319,6 @@
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -511,18 +415,6 @@ input::-webkit-input-placeholder {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -538,18 +430,6 @@ input::-webkit-input-placeholder {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -680,18 +560,6 @@ input::-webkit-input-placeholder {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -707,18 +575,6 @@ input::-webkit-input-placeholder {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -893,18 +749,6 @@ input::-webkit-input-placeholder {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -920,18 +764,6 @@ input::-webkit-input-placeholder {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1115,18 +947,6 @@ input::-webkit-input-placeholder {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -1142,18 +962,6 @@ input::-webkit-input-placeholder {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1179,6 +987,8 @@ footer {
   width: 100%;
   overflow: hidden;
   display: block;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .hero-footer {
@@ -1298,11 +1108,13 @@ footer {
 
 .contacts-map {
   margin-top: 40px;
+  padding-right: 20px;
   width: 100%;
   height: 300px;
 }
 
 .links-slider {
+  width: 160px;
   margin-top: 50px;
 }
 
@@ -1318,18 +1130,6 @@ footer {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -1345,18 +1145,6 @@ footer {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1384,6 +1172,7 @@ footer {
 body {
   background: linear-gradient(308.68deg, rgba(78, 77, 94, 0.24) 2.58%, #0F0C27 55.17%), radial-gradient(849.03px at -2.08% 64.75%, rgba(37, 34, 71, 0.7) 0%, #080521 100%);
   height: 100vh;
+  overflow: hidden;
   font-family: 'Merriweather', serif;
 }
 
@@ -1431,21 +1220,13 @@ body.mobile-popup-callback__active .mobile-popup-callback {
   display: 'block';
 }
 
+.blur {
+  filter: blur(5px);
+}
+
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -1461,18 +1242,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1508,18 +1277,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -1535,18 +1292,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1567,7 +1312,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
   padding: 5vh 3vw 10vh 10vw;
   height: 100vh;
   background: rgba(77, 74, 98, 0.7);
-  backdrop-filter: blur(5px);
   margin-left: 400px;
   transition: 0.5s;
   transform: translateX(100%);
@@ -1688,18 +1432,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -1715,18 +1447,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1922,18 +1642,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -1949,18 +1657,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -1981,7 +1677,6 @@ body.mobile-popup-callback__active .mobile-popup-callback {
   width: 100%;
   height: 100vh;
   background: rgba(77, 74, 98, 0.7);
-  backdrop-filter: blur(5px);
 }
 
 .popup-callback {
@@ -2060,18 +1755,6 @@ input::-webkit-input-placeholder {
 .fade {
   animation-name: fade;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .1;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -2087,18 +1770,6 @@ input::-webkit-input-placeholder {
 .fade-out {
   animation-name: fadeOut;
   animation-duration: 1s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: .1;
-  }
 }
 
 @keyframes fadeOut {
@@ -2119,7 +1790,6 @@ input::-webkit-input-placeholder {
   padding: 5vh 3vw 10vh 10vw;
   height: 100vh;
   background: rgba(77, 74, 98, 0.7);
-  backdrop-filter: blur(5px);
   margin-left: 400px;
   transition: 0.5s;
   transform: translateX(100%);
@@ -2245,7 +1915,6 @@ input::-webkit-input-placeholder {
   padding: 5vh 3vw 10vh 10vw;
   height: 100vh;
   background: rgba(77, 74, 98, 0.7);
-  backdrop-filter: blur(5px);
   margin-left: 400px;
   transition: 0.5s;
   z-index: 99;
