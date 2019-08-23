@@ -1,6 +1,5 @@
-@import 'mixin';
 .form-button {
-    @include Merri;
+    font-family: 'Merriweather', serif;
     font-weight: bold;
     border: none;
     cursor: pointer;

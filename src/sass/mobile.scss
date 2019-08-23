@@ -1,4 +1,3 @@
-@import 'desktop/mixin';
 .mob-container {
     position: relative;
     width: auto;
@@ -15,14 +14,14 @@
     }
     &-footer{
         &__rights {
-            @include Roboto;
+            font-family: 'Roboto', sans-serif;
             font-size: 12px;
             display: flex;
             justify-content: space-between;
             padding-bottom: 18px;
         }
         &__policy {
-            @include Roboto;
+            font-family: 'Roboto', sans-serif;
             font-size: 12px;
             padding-bottom: 27px;
         }
@@ -33,7 +32,7 @@
                 display: inline-block;
             }
             &__text {
-                @include Roboto;
+                font-family: 'Roboto', sans-serif;
                 display: inline-block;
                 margin-left: 8px;
                 font-size: 12px;
@@ -52,7 +51,7 @@
         }
         &__name {
             text-transform: uppercase;
-            @include Merri;
+            font-family: 'Merriweather', serif;
             font-size: 30px;
         }
         &__subtitle {

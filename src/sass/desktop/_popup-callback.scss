@@ -1,4 +1,3 @@
- @import 'mixin';
 .total {
     width: 100%;
     &-bg {
@@ -15,7 +14,6 @@
     width: 100%;
     height: 100vh;
     background: rgba(77, 74, 98, 0.7);
-    backdrop-filter: blur(5px);
     transition: 0.3s;
     transform: translateX(100%);
     z-index: 99;
@@ -29,14 +27,13 @@
         width: 655px;
         padding: 60px 30px 50px 105px;
         background: linear-gradient(234.74deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(77, 74, 98, 0.7);
-        backdrop-filter: blur(25px);
     }
     &-title {
         font-size: 36px;
         margin-bottom: 20px;
     }
     &-smalltitle {
-        @include Roboto;
+        font-family: 'Roboto', sans-serif;
         font-size: 24px;
         font-weight: normal;
         margin-bottom: 40px;
@@ -48,7 +45,7 @@
     &-subtitle {
         margin-top: 10px;
         color: #BDBDBD;
-        @include Roboto;
+        font-family: 'Roboto', sans-serif;
         width: 429px;
         font-size: 14px;
     }

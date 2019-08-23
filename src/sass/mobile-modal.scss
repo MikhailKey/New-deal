@@ -1,4 +1,3 @@
-@import 'desktop/mixin';
 .mobile-modal {
     top: 380px;
     position: absolute;
@@ -10,7 +9,7 @@
     transition: 0.3s;
     display: none;
     &__text {
-        @include Roboto;
+        font-family: 'Roboto', sans-serif;
         line-height: 28px;
         min-height: 250px;
     }
