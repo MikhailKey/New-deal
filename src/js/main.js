@@ -156,16 +156,31 @@ function ecsHide() {
        };
     });
 }
-
-document.addEventListener('mouseup', function (e) {
-    let body = document.querySelector('body');
-    
-        if (hero.contains(e.target)) 
+function escHide(arg) 
+{
+    document.addEventListener('keydown', function(e) {
+        let body = document.querySelector(arg);
+        if (e.keyCode === 27) 
         {
             body.classList = '';
             hero.classList.remove('blur');
         }
-}.bind(this));
+    });
+}
+
+function hideModal(arg) 
+{
+    document.addEventListener('mouseup', function (e) 
+    {
+        let body = document.querySelector(arg);
+
+            if (hero.contains(e.target)) 
+            {
+                body.classList = '';
+                hero.classList.remove('blur');
+            }
+    });
+}
 
 showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-arrow__close');
 showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-modal-title', '.service-modal-text');
@@ -173,4 +188,5 @@ showContacts('.modal-contacts', 'body', '.modal-contacts__close');
 showServiceDebt('.dot-debt', 'body', '.service-debt-arrow__close');
 showPopup('.callback', 'body', '.popup-callback-close');
 attachFile('.service-modal-footer__add-file input');
-ecsHide();
+escHide('body');
+hideModal('body');
