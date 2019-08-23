@@ -1,13 +1,14 @@
 @import 'desktop/mixin';
 .mob-container {
     position: relative;
-    width: 320px;
+    width: auto;
     padding: 20px;
     margin: auto;
     background: url('../img/mobile/линии.png') no-repeat bottom, linear-gradient(274.6deg, rgba(78, 77, 94, 0.24) 2.58%, #0F0C27 55.17%), radial-gradient(238.86px at -2.08% 64.75%, rgba(37, 34, 71, 0.7) 0%, #080521 100%);
     background-size: cover;    
 }
 .mobile {
+    display: none;
     &-slide {
         margin-bottom: 10px;
         cursor: pointer;

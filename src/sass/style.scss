@@ -9,3 +9,12 @@
 @import 'desktop/modal';
 @import 'desktop/modal-contacts';
 //mobile
+
+@media (max-width: 1000px) {
+    .hero {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}

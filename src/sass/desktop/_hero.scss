@@ -10,7 +10,7 @@ footer {
     position: relative;
     width: 100%;
     overflow: hidden;
-    display: none;
+    display: block;
     &-footer {
         @include Roboto;
         padding-bottom: 55px;
