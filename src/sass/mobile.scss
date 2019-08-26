@@ -125,3 +125,12 @@
         margin: 0 30px 0 23px;
     }
 }
+
+
+@media (min-width: 500px) 
+{
+    .mob-container {
+        background: url('../img/hero/particle-back.png') no-repeat bottom, linear-gradient(274.6deg, rgba(78, 77, 94, 0.24) 2.58%, #0F0C27 55.17%), radial-gradient(238.86px at -2.08% 64.75%, rgba(37, 34, 71, 0.7) 0%, #080521 100%);
+        background-size: cover;    
+    }
+}

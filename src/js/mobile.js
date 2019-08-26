@@ -153,6 +153,27 @@ function hideMobilePopup(...args)
         }
     })
 }
+
+function attachFile(...args) 
+{
+    let inputs = document.querySelectorAll(args[0]);
+    Array.prototype.forEach.call(inputs, function(input){
+    let label	 = input.previousElementSibling,
+        labelVal = label.innerHTML;
+    input.addEventListener('change', function(e){
+    let fileName = '';
+    if( this.files && this.files.length > 1 )
+      fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+    else
+      fileName = e.target.value.split( '\\' ).pop();
+		if( fileName )
+      label.innerHTML = fileName;
+    else
+      label.innerHTML = labelVal;
+	});
+});
+}
+
 popup('.mobile-callback', 'body', '.mobile-popup-callback__close');
 
 modalService('.navigation-item', 'body', '.mobile-service__arrow__close', '.mobile-service__title', '.mobile-service__text');
@@ -166,3 +187,5 @@ modalDebt('.navigation-item__debt', 'body', '.mobile-debt__arrow__close', '.mobi
 hideMobileModal('body');
 
 hideMobilePopup('.mobile-popup-callback', '.mobile-popup-callback__content');
+
+attachFile('.mobile-debt-footer__add-file input');

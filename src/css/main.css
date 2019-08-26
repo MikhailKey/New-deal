@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: local("Merriweather Light"), local("Merriweather-Light"), url("../fonts/merriweatherlight.woff2") format("woff2"), url("../fonts/merriweatherlight.woff") format("woff"), url("../fonts/merriweatherlight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local("Merriweather Regular"), local("Merriweather-Regular"), url("../fonts/merriweatherregular.woff2") format("woff2"), url("../fonts/merriweatherregular.woff") format("woff"), url("../fonts/merriweatherregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local("Merriweather UltraBold"), local("Merriweather-UltraBold"), url("../fonts/merriweatherultrabold.woff2") format("woff2"), url("../fonts/merriweatherultrabold.woff") format("woff"), url("../fonts/merriweatherultrabold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Robotolight.woff2") format("woff2"), url("../fonts/Robotolight.woff") format("woff"), url("../fonts/Robotolight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff"), url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Robotomedium.woff2") format("woff2"), url("../fonts/Robotomedium.woff") format("woff"), url("../fonts/Robotomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Robotobold.woff2") format("woff2"), url("../fonts/Robotobold.woff") format("woff"), url("../fonts/Robotobold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 .mobile-contacts {
   top: 380px;
   position: absolute;
@@ -544,6 +592,13 @@ input::-webkit-input-placeholder {
 
 .mobile-callback__arrow {
   margin: 0 30px 0 23px;
+}
+
+@media (min-width: 500px) {
+  .mob-container {
+    background: url("../img/hero/particle-back.png") no-repeat bottom, linear-gradient(274.6deg, rgba(78, 77, 94, 0.24) 2.58%, #0F0C27 55.17%), radial-gradient(238.86px at -2.08% 64.75%, rgba(37, 34, 71, 0.7) 0%, #080521 100%);
+    background-size: cover;
+  }
 }
 .service-modal-debt {
   position: absolute;
