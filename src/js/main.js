@@ -1,6 +1,4 @@
 let hero = document.querySelector('.hero');
-        
-
 
 function showModal(...args) 
 {    
@@ -90,11 +88,15 @@ function showServiceDebt(...args)
 {
     let debtButton = document.querySelector(args[0]),
         body = document.querySelector(args[1]),
-        closeButton = document.querySelectorAll(args[2]);
+        closeButton = document.querySelectorAll(args[2]),
+        text = document.querySelector(args[3]),
+        title = document.querySelector(args[4]);
 
     debtButton.addEventListener('click', function() 
     {
         body.classList.add('service-modal-debt__active');
+        title.innerHTML = this.getAttribute('data-title');
+        text.innerHTML = this.getAttribute('data-content');
         hero.classList.add('blur');
     });
 
@@ -181,12 +183,27 @@ function hideModal(arg)
             }
     });
 }
+function hidePopup(...args)
+{
+    document.addEventListener('mouseup', function(e)
+    {
+        let popupWrap = document.querySelector(args[0]),
+            popupContent = document.querySelector(args[1]);
+        
+        if (popupWrap.contains(e.target) && !popupContent.contains(e.target))
+        {
+            document.body.classList.remove('popup-callback__active');
+            hero.classList.remove('blur');
+        }
+    })
+}
 
-showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-arrow__close');
+showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-text');
 showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-modal-title', '.service-modal-text');
 showContacts('.modal-contacts', 'body', '.modal-contacts__close');
-showServiceDebt('.dot-debt', 'body', '.service-debt-arrow__close');
+showServiceDebt('.dot-debt', 'body', '.service-debt-arrow__close', '.service-modal-debt__text', '.service-modal-debt__title');
 showPopup('.callback', 'body', '.popup-callback-close');
 attachFile('.service-modal-footer__add-file input');
 escHide('body');
 hideModal('body');
+hidePopup('.popup-callback', '.popup-callback-content');

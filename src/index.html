@@ -15,6 +15,7 @@
 	<!-- GoogleFonts place -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900|Open+Sans:300,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,900|Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
 	<!-- Фавикон -->
 	<!-- <link rel="icon" href="путь до иконки в проект" type="image/x-icon"> -->
 	<!-- <link rel="shortcut" href="путь до иконки в проект" type="image/x-icon"> -->
@@ -109,10 +110,11 @@
 			<div class="hero-footer">
 				<div class="hero-footer-rights">
 						<p class="hero-footer-right__text">©2019 Долговед</p>
-						<p class="hero-footer-right__text">Все права защищены	</p>
+						<p class="hero-footer-right__text">Все права защищены</p>
 				</div>
 				<div class="hero-footer-policy">
 						<p class="hero-footer-policy__text modal-info" data-title="Политика конфиденциальности и пользователское соглашение" data-content="Сайт рыбатекст поможет дизайнеру.">Политика конфиденциальности и пользовательское соглашение</p>
+						
 				</div>
 				<a href="https://asap-ag.ru/">
 					<div class="hero-footer-creator">
@@ -132,7 +134,7 @@
 					<img class="modal-arrow modal-arrow__close" src="img/hero/vectors/arrow-left.png" alt="">	
 					<h1 class="modal-title">Заголовок</h1>
 				</div>
-				<div class="modal-main">
+				<div class="modal-main" data-simplebar>
 					<p class="modal-text">Здесь будет текст</p>
 				</div>
 					<div class="modal-footer">
@@ -150,7 +152,7 @@
 					<img class="modal-arrow modal-contacts__close" src="img/hero/vectors/arrow-left.png" alt="">	
 					<h1 class="modal-title">Контакты</h1>
 				</div>
-				<div class="modal-main">
+				<div class="modal-main" data-simplebar>
 						<div class="contacts">
 							<div class="contacts-item">
 								<img class="contacts-item__image" src="img/hero/contacts/phone.png" alt="">
@@ -184,7 +186,7 @@
 					<img class="service-modal-arrow service-modal-arrow__close" src="img/hero/vectors/arrow-left.png" alt="">	
 					<h1 class="service-modal-title">Заголовок</h1>
 				</div>
-				<div class="service-modal-main">
+				<div class="service-modal-main" data-simplebar>
 					<p class="service-modal-text">Здесь будет текст</p>
 				</div>
 			</div>
@@ -211,10 +213,10 @@
 			<div class="service-modal-wrap">
 				<div class="service-modal-header">
 					<img class="service-modal-arrow service-debt-arrow__close" src="img/hero/vectors/arrow-left.png" alt="">	
-					<h1 class="service-modal-title">Заголовок</h1>
+					<h1 class="service-modal-title service-modal-debt__title">Заголовок</h1>
 				</div>
 				<div class="service-modal-main">
-					<p class="service-modal-text">Здесь будет текст</p>
+					<p class="service-modal-text service-modal-debt__text">Здесь будет текст</p>
 				</div>
 			</div>
 			<div class="service-modal-footer service-modal-offer">
@@ -491,7 +493,8 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.plugin.min.js"></script>
 	<script src="js/jquery.countdown.min.js"></script> -->
-	<script src="js/main.js"></script>
-	<script src="js/mobile.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
 </body>
 </html>
