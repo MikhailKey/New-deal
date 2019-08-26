@@ -1,3 +1,4 @@
+let mobile = document.querySelector('.mobile')
 function popup (...args)
 {
     let callButton = document.querySelector(args[0]),
@@ -7,11 +8,15 @@ function popup (...args)
     callButton.addEventListener('click', function()
     {
         body.classList.add('mobile-popup-callback__active');
+        body.style.overflow = 'hidden';
+        mobile.classList.add('blur');
     });
 
     callCloseButton.addEventListener('click', function()
     {
         body.classList.remove('mobile-popup-callback__active');
+        mobile.classList.remove('blur');
+        body.style.overflow = 'visible';
     });
 }
 
@@ -31,6 +36,7 @@ function modalService(...args)
                 title.innerHTML = this.getAttribute('data-title');
                 text.innerHTML = this.getAttribute('data-content');
                 body.classList.add('mobile-service__active');
+                mobile.classList.add('blur');
             });  
         })
 
@@ -39,18 +45,9 @@ function modalService(...args)
         arrow.addEventListener('click', function () 
         {
             body.classList.remove('mobile-service__active');
+            mobile.classList.remove('blur');
         })
     });
-
-    document.addEventListener('mouseup', function (e) 
-    {
-        let div = document.querySelector('.mobile-service');
-    
-        if (!div.contains(e.target)) 
-        {
-            body.classList.remove('mobile-service__active');
-        }
-    }.bind(this));
 }
 
 function modal(...args) 
@@ -70,6 +67,7 @@ function modal(...args)
             title.innerHTML = this.getAttribute('data-title');
             text.innerHTML = this.getAttribute('data-content');
             body.classList.add('mobile-modal__active');
+            mobile.classList.add('blur');
         });
     });
 
@@ -78,18 +76,9 @@ function modal(...args)
         arrow.addEventListener('click', function () 
         {
             body.classList.remove('mobile-modal__active');
+            mobile.classList.remove('blur');
         });
     });
-
-    document.addEventListener('mouseup', function (e) 
-    {
-        let div = document.querySelector('.mobile-modal');
-    
-        if (!div.contains(e.target)) 
-        {
-            body.classList.remove('mobile-modal__active');
-        }
-    }.bind(this));
 }
 
 function modalContacts(...args) 
@@ -100,6 +89,7 @@ function modalContacts(...args)
     contactsButton.addEventListener('click', function() 
     {
         body.classList.add('mobile-contacts__active');
+        mobile.classList.add('blur');
     });
 
     closeButton.forEach(function(button) 
@@ -107,18 +97,9 @@ function modalContacts(...args)
         button.addEventListener('click', function() 
         {
             body.classList.remove('mobile-contacts__active');
+            mobile.classList.remove('blur');
         })
     });
-
-    document.addEventListener('mouseup', function (e) 
-    {
-        let div = document.querySelector('.mobile-contacts');
-    
-        if (!div.contains(e.target)) 
-        {
-            body.classList.remove('mobile-contacts__active');
-        }
-    }.bind(this));
 }
 
 function modalDebt(...args) 
@@ -131,6 +112,7 @@ function modalDebt(...args)
 
     debtButton.addEventListener('click', function() {
         body.classList.add('mobile-debt__active');
+        mobile.classList.add('blur');
         title.innerHTML = this.getAttribute('data-title');
         text.innerHTML = this.getAttribute('data-content');
     });
@@ -139,18 +121,37 @@ function modalDebt(...args)
         button.addEventListener('click', function() 
         {
             body.classList.remove('mobile-debt__active');
+            mobile.classList.remove('blur');
         })
     });
+}
 
+function hideMobileModal(arg) 
+{
     document.addEventListener('mouseup', function (e) 
     {
-        let div = document.querySelector('.mobile-debt');
-    
-        if (!div.contains(e.target)) 
+        let body = document.querySelector(arg);
+
+            if (mobile.contains(e.target)) 
+            {
+                body.classList = '';
+                mobile.classList.remove('blur');
+            }
+    });
+}
+function hideMobilePopup(...args)
+{
+    document.addEventListener('mouseup', function(e)
+    {
+        let popupWrap = document.querySelector(args[0]),
+            popupContent = document.querySelector(args[1]);
+        
+        if (popupWrap.contains(e.target) && !popupContent.contains(e.target))
         {
-            body.classList.remove('mobile-debt__active');
+            document.body.classList = '';
+            mobile.classList.remove('blur');
         }
-    }.bind(this));
+    })
 }
 popup('.mobile-callback', 'body', '.mobile-popup-callback__close');
 
@@ -161,3 +162,7 @@ modal('.mobile-modal-link', 'body', '.mobile-modal__arrow__close', '.mobile-moda
 modalContacts('.mobile-modal-contact', 'body', '.mobile-contacts__arrow__close');
 
 modalDebt('.navigation-item__debt', 'body', '.mobile-debt__arrow__close', '.mobile-debt__title', '.mobile-debt__text');
+
+hideMobileModal('body');
+
+hideMobilePopup('.mobile-popup-callback', '.mobile-popup-callback__content');
