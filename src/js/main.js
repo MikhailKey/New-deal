@@ -203,7 +203,7 @@ showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-
 showContacts('.modal-contacts', 'body', '.modal-contacts__close');
 showServiceDebt('.dot-debt', 'body', '.service-debt-arrow__close', '.service-modal-debt__text', '.service-modal-debt__title');
 showPopup('.callback', 'body', '.popup-callback-close');
-attachFile('.service-modal-footer__add-file input');
+attachFile('.service-modal-footer__add-file__input');
 escHide('body');
 hideModal('body');
 hidePopup('.popup-callback', '.popup-callback-content');

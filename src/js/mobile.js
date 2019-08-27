@@ -154,11 +154,11 @@ function hideMobilePopup(...args)
     })
 }
 
-function attachFile(...args) 
+function attachMobileFile(...args) 
 {
     let inputs = document.querySelectorAll(args[0]);
     Array.prototype.forEach.call(inputs, function(input){
-    let label	 = input.previousElementSibling,
+    let label = input.previousElementSibling,
         labelVal = label.innerHTML;
     input.addEventListener('change', function(e){
     let fileName = '';
@@ -188,4 +188,4 @@ hideMobileModal('body');
 
 hideMobilePopup('.mobile-popup-callback', '.mobile-popup-callback__content');
 
-attachFile('.mobile-debt-footer__add-file input');
+attachMobileFile('.mobile-debt-footer__add-file__input');
