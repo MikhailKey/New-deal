@@ -1,13 +1,15 @@
 .mob-container {
     position: relative;
-    width: auto;
+    width: 100%;
     padding: 20px;
-    margin: auto;
     background: url('../img/mobile/mobile-lines.png') no-repeat bottom;
     background-size: cover;    
 }
 .mobile {
     display: none;
+    &-window {
+        display: none;
+    }
     &-slide {
         margin-bottom: 10px;
         cursor: pointer;

@@ -149,15 +149,6 @@ function attachFile(...args)
 });
 }
 
-function ecsHide() {
-    let body = document.querySelector('body').addEventListener("keypress", function(e)
-    {
-       if (e.keyCode === 13) 
-       {
-           console.log(body);
-       };
-    });
-}
 function escHide(arg) 
 {
     document.addEventListener('keydown', function(e) {
@@ -183,6 +174,7 @@ function hideModal(arg)
             }
     });
 }
+
 function hidePopup(...args)
 {
     document.addEventListener('mouseup', function(e)
@@ -198,6 +190,38 @@ function hidePopup(...args)
     })
 }
 
+function buttonGradient(...args) 
+{
+    let callback = document.querySelector(args[0]),
+        firstGradient = document.querySelector(args[1]),
+        secondGradient = document.querySelector(args[2]);
+
+    callback.addEventListener('mouseover', function()
+    {
+        firstGradient.style.opacity = '0.5';
+        setTimeout(function()
+        {
+            firstGradient.style.opacity = '0';
+            callback.classList.remove('callback-gradient-start');
+            callback.classList.add('callback-gradient-end');
+            callback.style.opacity = '1';
+        }, 300); 
+    })
+    
+    callback.addEventListener('mouseout', function()
+{
+    callback.style.opacity = '0.5';
+    setTimeout(function()
+    {
+        callback.style.opacity = '0';
+        callback.classList.remove('callback-gradient-end');
+        callback.classList.add('callback-gradient-start');
+        callback.style.opacity = '1';
+    }, 300); 
+})
+}
+
+
 showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-text');
 showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-modal-title', '.service-modal-text');
 showContacts('.modal-contacts', 'body', '.modal-contacts__close');
@@ -207,3 +231,4 @@ attachFile('.service-modal-footer__add-file__input');
 escHide('body');
 hideModal('body');
 hidePopup('.popup-callback', '.popup-callback-content');
+buttonGradient('.callback', '.callback-gradient-start', '.callback-gradient-end');

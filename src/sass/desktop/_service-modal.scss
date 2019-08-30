@@ -79,8 +79,8 @@
         }
         &__block {
             position: absolute;    
-            bottom: 15%;
-            left: 5%;
+            bottom: 20%;
+            left: 3%;
         }
         &__arrow {
             display: inline-block;
@@ -95,7 +95,7 @@
         position: absolute;
         cursor: pointer;
         top: 20%;
-        left: -7%;
+        left: -11.5%;
         transition: 0.3s;
         &__close {
             cursor: pointer;
@@ -119,12 +119,3 @@
         padding-right: 100px;
     }
 }
-
-
-::-webkit-scrollbar { width: 5px; height: 3px; }
-::-webkit-scrollbar-button { display: none }
-::-webkit-scrollbar-track {  background-color: rgba(255, 255, 255, 0.1);;}
-::-webkit-scrollbar-track-piece { background-color: rgba(255, 255, 255, 0.1);}
-::-webkit-scrollbar-thumb { height: 50px; background-color: #FFFFFF; border-radius: 3px;}
-::-webkit-scrollbar-corner { background-color: #999; border-radius: 50px;}
-::-webkit-resizer { background-color: #666;}
