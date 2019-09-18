@@ -32,20 +32,6 @@ footer {
                 cursor: pointer;
             }
         }
-        &-creator {
-            flex-basis: 20%;
-            img {
-                width: 33px;
-                height: auto;
-                display: inline-block;
-            }
-            &__text {
-                display: inline-block;
-                line-height: 20px;
-                font-size: 14px;
-                margin-left: 20px;
-            }
-        }
     }
 }
 .callback {
@@ -171,15 +157,6 @@ footer {
                     cursor: pointer;
                 }
             }
-            &-creator {
-                flex-basis: 20%;
-                img {
-                    width: 28px;
-                }
-                &__text {
-                    font-size: 12px;
-                }
-            }
         }
     }
 }
@@ -196,15 +173,6 @@ footer {
                 font-size: 12px;
                 &__text {
                     cursor: pointer;
-                }
-            }
-            &-creator {
-                flex-basis: 20%;
-                img {
-                    width: 28px;
-                }
-                &__text {
-                    font-size: 12px;
                 }
             }
         }
