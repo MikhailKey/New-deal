@@ -190,37 +190,6 @@ function hidePopup(...args)
     })
 }
 
-function buttonGradient(...args) 
-{
-    let callback = document.querySelector(args[0]),
-        firstGradient = document.querySelector(args[1]),
-        secondGradient = document.querySelector(args[2]);
-
-    callback.addEventListener('mouseover', function()
-    {
-        firstGradient.style.opacity = '0.5';
-        setTimeout(function()
-        {
-            firstGradient.style.opacity = '0';
-            callback.classList.remove('callback-gradient-start');
-            callback.classList.add('callback-gradient-end');
-            callback.style.opacity = '1';
-        }, 300); 
-    })
-    
-    callback.addEventListener('mouseout', function()
-{
-    callback.style.opacity = '0.5';
-    setTimeout(function()
-    {
-        callback.style.opacity = '0';
-        callback.classList.remove('callback-gradient-end');
-        callback.classList.add('callback-gradient-start');
-        callback.style.opacity = '1';
-    }, 300); 
-})
-}
-
 
 showModal('.modal-info', 'body', '.modal-arrow__close', '.modal-title', '.modal-text');
 showServiceModal('.dot-wrap', 'body ', '.service-modal-arrow__close', '.service-modal-title', '.service-modal-text');
@@ -231,4 +200,20 @@ attachFile('.service-modal-footer__add-file__input');
 escHide('body');
 hideModal('body');
 hidePopup('.popup-callback', '.popup-callback-content');
-buttonGradient('.callback', '.callback-gradient-start', '.callback-gradient-end');
+
+ymaps.ready(init); 
+function init(){
+	var myMap = new ymaps.Map("map",{center: [55.75985606898725,37.61054750000002],zoom: 12});
+	myMap.controls.add("zoomControl").add("typeSelector").add("mapTools");
+    var myPlacemark = new ymaps.Placemark([55.75985606898725,37.61054750000002], {}, {preset: 'twirl#blackIcon'
+    })
+   
+    myMap.geoObjects.add(myPlacemark);	
+
+    var myMobileMap = new ymaps.Map("map2",{center: [55.75985606898725,37.61054750000002],zoom: 12});
+	myMobileMap.controls.add("zoomControl").add("typeSelector").add("mapTools");
+    var myMobilePlacemark = new ymaps.Placemark([55.75985606898725,37.61054750000002], {}, {preset: 'twirl#blackIcon'
+    })
+   
+	myMobileMap.geoObjects.add(myMobilePlacemark);	
+}

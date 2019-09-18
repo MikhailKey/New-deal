@@ -18,7 +18,7 @@ footer {
         padding-bottom: 55px;
         display: flex;
         flex-wrap: wrap;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 18px;
         justify-content: space-between;
         align-items: center;
@@ -27,6 +27,7 @@ footer {
         }
         &-policy {
             flex-basis: 60%;
+            font-size: 14px;
             &__text {
                 cursor: pointer;
             }
@@ -34,12 +35,14 @@ footer {
         &-creator {
             flex-basis: 20%;
             img {
-                width: 28px;
+                width: 33px;
                 height: auto;
                 display: inline-block;
             }
             &__text {
                 display: inline-block;
+                line-height: 20px;
+                font-size: 14px;
                 margin-left: 20px;
             }
         }
@@ -57,6 +60,11 @@ footer {
     justify-content: flex-end;
     align-items: center;
     transition: 0.5s;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0), #FFFFFF,rgba(255, 255, 255, 0)), rgba(255, 255, 255, 0.25);
+    background-size: 200%;
+    &:hover {
+        background-position: right;
+    }
     &-text { 
         color: #252247;
     }
@@ -79,6 +87,7 @@ footer {
         font-size: 48px;
     }
     &__subtitle {
+        margin-top: 15px;
         margin-left: 26px;
         font-size: 12px;
         font-weight: 300;
@@ -126,7 +135,8 @@ footer {
         margin-top: 50px;
     }
     &-slide {
-        padding-bottom: 10px;
+        font-size: 16px;
+        padding-bottom: 15px;
         cursor: pointer
     }
 }
@@ -134,12 +144,69 @@ footer {
     transform: translateX(0%);
 }
 
-.callback-gradient-start {
-    background: linear-gradient(260.18deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 80.23%), rgba(255, 255, 255, 0.25);
-    transition: 0.5s;
+@media (min-width: 1440px) {
+    .links {
+        &-slider {
+            width: 160px;
+            margin-top: 100px;
+        }
+        &-slide {
+            font-size: 20px;
+            padding-bottom: 20px;
+            cursor: pointer
+        }
+    }
 }
-.callback-gradient-end {
-    background: linear-gradient(110.18deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 80.23%), rgba(255, 255, 255, 0.25);
-    transition: 0.3s;
-    opacity: 0;
+@media (max-width: 1200px) {
+    .hero {
+        &-footer {
+            padding-bottom: 35px;
+            &-rights {
+                flex-basis: 20%;
+            }
+            &-policy {
+                flex-basis: 40%;
+                font-size: 12px;
+                &__text {
+                    cursor: pointer;
+                }
+            }
+            &-creator {
+                flex-basis: 20%;
+                img {
+                    width: 28px;
+                }
+                &__text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        &-footer {
+            padding-bottom: 35px;
+            &-rights {
+                flex-basis: 20%;
+            }
+            &-policy {
+                flex-basis: 40%;
+                font-size: 12px;
+                &__text {
+                    cursor: pointer;
+                }
+            }
+            &-creator {
+                flex-basis: 20%;
+                img {
+                    width: 28px;
+                }
+                &__text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }

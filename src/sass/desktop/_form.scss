@@ -6,7 +6,12 @@
     height: 60px;
     font-size: 18px;
     color: #252247;
-    background: linear-gradient(257.79deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.25);
+    background: linear-gradient(257.79deg, rgba(255, 255, 255, 0), #FFFFFF, rgba(255, 255, 255, 0)), rgba(255, 255, 255, 0.25);
+    background-size: 200%;
+    transition: 0.5s;
+    &:hover {
+        background-position: right;
+    }
 }
 .form-input {
     height: 60px;
